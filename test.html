@@ -21,29 +21,41 @@
 <body>
 <script>
   function pow(x, n) {
-       let result = 1;
+    let result = x;
 
-       for (let i = 0; i < n; i++) {
-         result *= x
-       }
-       return result;
+    for (let i=0; i < n-1; i++){
+      result *= x;
+    };
+
+    return result;
   }
-</script>
 
 
+  function fib (n) {
+    let f0 = 1;
+    let f1 = 1;
+    let f2 = 1;
 
-<script>
-  function fib(n) {
-       let f0 = 1;
-       let f1 = 1;
-       let f2 = 1;
+    for (let i=3; i <= n; i++){
+      f2 = f0+f1;
+      f0 = f1;
+      f1 = f2;
+    };
 
-       for (let i = 3; i <= n; i++) {
-         f2 = f0 + f1;
-         f0 = f1;
-         f1 = f2;
-       }
-       return f2;
+    return f2;
+  }
+
+
+  function find(name, array) {
+      let result = 0;
+
+      for (let i = 0; i < array.length; i++){
+        if (array[i] == name){
+          result = i;
+        };
+      };
+
+      return result;
   }
 </script>
 
