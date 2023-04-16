@@ -30,6 +30,23 @@
   }
 </script>
 
+
+
+<script>
+  function fib(n) {
+       let f0 = 1;
+       let f1 = 1;
+       let f2 = 1;
+
+       for (let i = 3; i <= n; i++) {
+         f2 = f0 + f1;
+         f0 = f1;
+         f1 = f2;
+       }
+       return f2;
+  }
+</script>
+
 <!-- скрипт со спецификацией (describe, it...) -->
 <script src="test.js"></script>
 
