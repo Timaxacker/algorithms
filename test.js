@@ -31,3 +31,36 @@ describe("find", function() {
     });
 
 });
+
+
+describe("prime_factors", function() {
+
+    it("раскладывает число на простые множители", function() {
+        assert.equal(prime_factors(10), '2 5');
+        assert.equal(prime_factors(777), '3 7 37');
+        assert.equal(prime_factors(69), '3 23');
+    });
+
+});
+
+
+describe("quadratic_equation", function() {
+
+    it("решает квадратные уравнения", function() {
+        assert.equal(quadratic_equation(1, 2, -3), -3, 1);
+        assert.equal(quadratic_equation(7, 7, 7), null, null);
+        assert.equal(quadratic_equation(1, -6, 9), null, 3);
+    });
+
+});
+
+
+describe("abs", function() {
+
+    it("возвращает модуль числа", function() {
+        assert.equal(abs(6), 6);
+        assert.equal(abs(0), 0);
+        assert.equal(abs(-6), 6);
+    });
+
+});
