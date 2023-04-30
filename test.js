@@ -64,3 +64,46 @@ describe("abs", function() {
     });
 
 });
+
+
+describe("point_logic", function() {
+
+    it("проверяет находится ли число в диапазоне", function() {
+        assert.equal(point_logic(0, 5, 3), true);
+        assert.equal(point_logic(0, 5, 6), false);
+    });
+
+});
+
+
+describe("swap", function() {
+
+    it("меняет числа местами в списке", function() {
+        let array = [3, 2, 1]
+        assert.equal(swap(array, 0, 2), '1,2,3');
+
+    });
+
+});
+
+
+describe("palindrom", function() {
+
+    it("проверяет является ли слово палиндромом", function() {
+        assert.equal(palindrom('дед'), true);
+        assert.equal(palindrom('тима'), false);
+
+    });
+
+});
+
+
+describe("iter_bin_search", function() {
+
+    it("итерационный бинарный поиск", function() {
+        let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        assert.equal(iter_bin_search(array, 8), 8);
+
+    });
+
+});

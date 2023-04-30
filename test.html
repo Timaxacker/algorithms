@@ -109,6 +109,58 @@
 
       return result;
   }
+
+
+  function point_logic(a, b, x) {
+    if (a < x && b > x) {
+      return true
+    } 
+    return false
+  }
+
+
+  function swap(array, a, b) {
+    array[a] = array[a] + array[b]
+    array[b] = array[a] - array[b]
+    array[a] = array[a] - array[b]
+
+    return array.toString()
+  }
+
+
+  function palindrom(str) {
+    let str1 = ''
+
+    for (let i = str.length - 1; i >= 0; i--) {
+      str1 += str[i]
+    }
+
+    if (str == str1) {
+      return true
+    }
+
+    return false
+  }
+
+
+  function iter_bin_search(array, x) {
+    array.sort()
+    let start = 0;
+    let end = array.length;
+
+    while (start < end) {
+      let mid = Math.floor((start + end) / 2);
+      if (array[mid] == x) {
+        return mid;
+      } else if (array[mid] < x) {
+        start = mid + 1;
+      } else {
+        end = mid - 1
+        }
+    }
+    return -1;
+  }
+
 </script>
 
 <!-- скрипт со спецификацией (describe, it...) -->
